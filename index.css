@@ -1,0 +1,55 @@
+html {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+* {
+  box-sizing: content-box; 
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header .left-section{
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+}
+.header .left-section .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #0033A0 0%, #A50044 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.header .right-section ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 80px;
+  padding: 0;
+}
+
+.header .right-section ul li{
+  margin-right: 50px;
+  padding: 0;
+}
+.header .right-section ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.header .right-section ul li a:hover{
+  color: #A50044;
+}
