@@ -63,6 +63,13 @@ body{
     display: block;
   }
 
+  .menu-buttons {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
 .menu-toggle, .cancel-menu {
   display: none;
   background: none;
@@ -70,10 +77,8 @@ body{
   cursor: pointer;
   padding: 0;
 } 
-.cancel-menu{
-  margin-left: 570px;
-  margin-top: -60px;
-}
+
+
 
 @media (max-width: 768px) {
   .header{
@@ -85,6 +90,7 @@ body{
     width: 100%;
     justify-content: space-between;
     margin: 30px;
+    position: relative;
   }
   .header .left-section .logo{
     margin-left: 30px;
@@ -93,6 +99,8 @@ body{
     width: 100%;
     justify-content: space-between;
     display: block;
+    overflow: hidden;
+    background: white;
   }
   .header .right-section ul{
     margin-right: 10px;
@@ -111,20 +119,40 @@ body{
     width: 100%;
     padding: 10px 15px;
     background-color: aliceblue;
+    border-bottom: 1px solid #ddd;
+  }
+  .menu-buttons {
+    display: block;
   }
   .menu-toggle{
+    position: absolute;
+    right: 14px;
     display: block;
-    margin-right: 3cqw;
+    margin-right: cqw;
     background-color: black;
     cursor: pointer;
   }
+  .cancel-menu{
+    position: absolute;
+    right: -13px;
+    top:0;
+  }
  .js-navigation {
-    display: none;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+    background: white;
+    width: 100%;
+    
   }
   
   .js-navigation.active {
     display: flex;
     flex-direction: column;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .js-menu-toggle.hidden {
@@ -136,5 +164,4 @@ body{
     margin-right: 30px;
   }
   
-
 }
