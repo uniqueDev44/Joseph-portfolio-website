@@ -4,21 +4,25 @@ html {
   display: block;
 }
 body{
+  margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
+
 }
 * {
-  box-sizing: content-box; 
+  box-sizing: border-box; 
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+ 
 }
 .header .left-section{
   display: flex;
   align-items: center;
   margin-left: 80px;
+  margin-right: 20px
 }
 .header .left-section .logo {
   font-size: 24px;
@@ -29,27 +33,108 @@ body{
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+
 }
 .header .right-section ul{
   display: flex;
   align-items: center;
   list-style: none;
-  margin-right: 80px;
+  margin-right: 30px;
   padding: 0;
+  gap: clamp(5px, 4vw, 0px);
 }
 
 .header .right-section ul li{
-  margin-right: 50px;
+  margin-right:clamp(5px, 3vw, 50px);
   padding: 0;
 }
 .header .right-section ul li a{
   text-decoration: none;
   color: black;
-  font-size: 15px;
+  font-size: clamp(15px, 1vw, 20px);
   text-transform: uppercase;
   font-weight: 900;
 }
 
 .header .right-section ul li a:hover{
   color: #A50044;
+}
+ .active .menu-toggle{
+    display: block;
+  }
+
+.menu-toggle, .cancel-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+} 
+.cancel-menu{
+  margin-left: 570px;
+  margin-top: -60px;
+}
+
+@media (max-width: 768px) {
+  .header{
+    width: 100%;
+    flex-direction: column;
+    background-color: tomato;
+  }
+  .header .left-section{
+    width: 100%;
+    justify-content: space-between;
+    margin: 30px;
+  }
+  .header .left-section .logo{
+    margin-left: 30px;
+  }
+  .header .right-section{
+    width: 100%;
+    justify-content: space-between;
+    display: block;
+  }
+  .header .right-section ul{
+    margin-right: 10px;
+    flex-direction: column;
+   
+  }
+  .header .right-section ul li{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    
+  }
+  .header .right-section ul li a{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: aliceblue;
+  }
+  .menu-toggle{
+    display: block;
+    margin-right: 3cqw;
+    background-color: black;
+    cursor: pointer;
+  }
+ .js-navigation {
+    display: none;
+  }
+  
+  .js-navigation.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .js-menu-toggle.hidden {
+    display: none;
+  }
+  
+  .js-cancel-menu.show {
+    display: block;
+    margin-right: 30px;
+  }
+  
+
 }
