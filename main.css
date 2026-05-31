@@ -71,4 +71,7 @@
   .banner-area .role {
     font-size: clamp(40px, 2vw, 60px);
   }
+  .banner-area .btn{
+    margin-bottom: 20px;
+  }
 }
