@@ -1,0 +1,6 @@
+- [ ] Inspect current nav/menu CSS + JS
+- [ ] Implement mobile nav overlay that slides top→bottom
+- [ ] Fix CSS issues preventing menu from appearing (including invalid unit `cqw`, and display/positioning logic)
+- [ ] Ensure z-index so menu overlays banner content
+- [ ] Ensure open/close classes work reliably
+- [ ] Run a quick local build/check (optional)
