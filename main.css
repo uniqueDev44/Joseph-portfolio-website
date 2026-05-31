@@ -1,0 +1,74 @@
+.banner-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px;
+}
+.banner-area .title {
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 400;
+  text-transform: uppercase;
+    background: linear-gradient(90deg, #0033A0 0%, #A50044 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.banner-area .role {
+  font-size: clamp(60px, 2vw, 80px);
+  font-weight: 900;
+  margin: 20px 0;
+  text-transform: uppercase;
+    background: linear-gradient(90deg, #0033A0 0%, #A50044 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.banner-area .btn {
+  font-size: clamp(15px, 1vw, 20px);
+  font-weight: 400;
+  margin-right: 20px;
+  width: 100px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+}
+.banner-area .btn a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #A50044;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+    
+}
+.banner-area .btn a:hover {
+  background-color: white;
+  background: linear-gradient(90deg, #0033A0 0%, #A50044 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .banner-area {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .banner-area .title {
+    font-size: clamp(15px, 4vw, 25px);
+  }
+  .banner-area .role {
+    font-size: clamp(40px, 2vw, 60px);
+  }
+}

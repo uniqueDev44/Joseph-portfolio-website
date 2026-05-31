@@ -7,16 +7,24 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+  background-color: #F5F5F5;
 
 }
 * {
   box-sizing: border-box; 
 }
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; 
+  height: 80px;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  overflow: hidden;
+  z-index: -1;
 }
 .header .left-section{
   display: flex;
@@ -50,7 +58,7 @@ body{
 }
 .header .right-section ul li a{
   text-decoration: none;
-  color: black;
+  color: #0033A0;
   font-size: clamp(15px, 1vw, 20px);
   text-transform: uppercase;
   font-weight: 900;
@@ -85,6 +93,8 @@ body{
     width: 100%;
     flex-direction: column;
     background-color: tomato;
+    z-index: 10;
+    overflow: hidden;
   }
   .header .left-section{
     width: 100%;
@@ -101,11 +111,11 @@ body{
     display: block;
     overflow: hidden;
     background: white;
+    position:relative
   }
   .header .right-section ul{
     margin-right: 10px;
     flex-direction: column;
-   
   }
   .header .right-section ul li{
     margin: 0;
@@ -131,6 +141,7 @@ body{
     margin-right: cqw;
     background-color: black;
     cursor: pointer;
+    z-index: 11;
   }
   .cancel-menu{
     position: absolute;
@@ -144,7 +155,7 @@ body{
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
     background: white;
     width: 100%;
-    
+
   }
   
   .js-navigation.active {
